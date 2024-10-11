@@ -1,0 +1,108 @@
+.logo{
+    height:25px;
+    position: relative;
+    top: 5px;
+    margin-left: var(--primary-side-margin);
+}
+
+.login-cta{
+    float: right;
+    margin-right: var(--primary-side-margin);
+    position: relative;
+    top: 5px;
+}
+
+.nav-link{
+    margin-left: var(--primary-side-margin);
+    font-size: 16px;
+    color:var(--secondary-text-color);
+    text-decoration: none;
+    position: relative;
+    top: 3px;
+}
+
+.nav-container{
+    border-bottom: 1px solid var(--main-border-color);
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+.secondary-nav-container{
+    margin-top: 20px;
+}
+
+.nav-link:hover{
+    color:var(--primary-cta-color);
+}
+
+.secondary-nav-link:hover{
+    text-decoration: underline;
+    color:var(--secondary-text-color);
+}
+
+#menu-icon{
+    font-size: 30px;
+    position: relative;
+    top:5px;
+    float: right;
+    margin-right: var(--primary-side-margin);
+}
+
+@media screen and (width <= 50rem) {
+    .nav-link,
+    .login-cta{
+        display: none;
+    }
+   .nav-container-sm{
+    position: fixed;
+    right: 0;
+    left:0;
+    top:0;
+    height: 100%;
+    background-color: #fff;
+   } 
+   .nav-container-sm *{
+    display: block;
+    margin: auto;
+    text-align: center;
+   }
+   #close-icon{
+     float:right;
+     margin-right: var(--primary-side-margin);
+     position: relative;
+     top:20px;
+     font-size: 30px;
+   }
+   .links-container-sm{
+    height: 100%;
+    display: grid;
+    align-items: center;
+   }
+   .nav-link-sm{
+        text-decoration: none;
+        color:var(--secondary-text-color);
+        margin-bottom: 15px;
+   }
+   .bottom-fixed-container{
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     padding-bottom: var(--primary-vertical-padding);
+     padding-top: var(--primary-vertical-padding);
+     border-top: 1px solid var(--main-border-color);
+
+   } 
+   .login-cta-sm{
+    width: 90%;
+   }
+}
+
+@media screen and (width > 50rem){
+    #menu-icon{
+        display: none;
+    }
+    .nav-container-sm{
+        display: none;
+    }
+}
