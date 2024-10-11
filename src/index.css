@@ -10,7 +10,9 @@ body{
 
   --primary-cta-color:#7695FF;
 
-  --primary-background-color:#D2E0FB;
+
+  /* --primary-background-color:#a3b5d8; */
+  --primary-background-color:#cad7f1;
   --secondary-background-color:#F5F7F8;
 
   --main-border-color:#cac9c9;
@@ -19,6 +21,8 @@ body{
 
   --primary-side-margin: 15px;
   --primary-vertical-padding: 15px;
+
+  --main-text-font-size: 24px;
 }
 
 .main-cta{
@@ -29,4 +33,10 @@ body{
    border: none;
    border-radius:var(--main-radius);
    cursor: pointer;
+}
+
+.main-text{
+  font-size: var(--main-text-font-size);
+  color:var(--primary-text-color);
+  
 }
