@@ -3,9 +3,19 @@ import logo from '../../images/Phanda.svg';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { useState } from 'react';
 import './style.css';
 
 const Nav = () => {
+    const [isOpened, setIsOpened] = useState(false);
+
+    const handleOpen = () => {
+        setIsOpened(true);
+    }
+
+    const handleClose = () => {
+        setIsOpened(false);
+    }
     return(
         <div>
             <Grid container>
@@ -17,12 +27,12 @@ const Nav = () => {
                    <Link to="/" className="nav-link">Find skill</Link> 
                    <Link to="/" className="nav-link">Find work</Link>
                    <button className='main-cta login-cta'>SIGN UP</button>
-                   <MenuIcon id="menu-icon"/>
+                   <MenuIcon id="menu-icon" onClick={handleOpen}/>
                    </div>
                </Grid>
-                   <div className="nav-container-sm">
+                   <div className={`nav-container-sm ${isOpened? 'nav-opened' :'nav-closed'}`}>
                     <div className="container-action">
-                       <CloseIcon id="close-icon"/>
+                       <CloseIcon id="close-icon" onClick={handleClose}/>
                     </div>
                     <div className="links-container-sm">
                     <div>

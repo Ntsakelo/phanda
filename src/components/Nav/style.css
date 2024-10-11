@@ -24,7 +24,7 @@
 .nav-container{
     border-bottom: 1px solid var(--main-border-color);
     height: 100%;
-    padding-bottom: 10px;
+    padding-bottom: var(--primary-vertical-padding);
 }
 
 .secondary-nav-container{
@@ -53,6 +53,14 @@
     .login-cta{
         display: none;
     }
+    .nav-closed{
+        transform: translateX(-1000px);
+        transition: 0.3s linear transform;
+    }
+   .nav-opened{
+    transform: translateX(0px);
+    transition: 0.3s linear transform;
+   }
    .nav-container-sm{
     position: fixed;
     right: 0;
