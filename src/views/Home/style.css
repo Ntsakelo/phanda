@@ -24,6 +24,26 @@
     
 }
 
+.services{
+    height: 100%;
+    width: fit-content;
+    margin: auto;
+}
 .service-item{
-    
+    width: 100px;
+    height: 100px;
+    margin-right: var(--primary-side-margin);
+    margin-left: var(--primary-side-margin);
+    margin-top: 20px;
+    border-radius: var(--main-radius);
+    padding: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px #e0dfdf;
+    display: inline;
+    float: inline-start;
+}
+
+.service-item:hover{
+    background: radial-gradient(farthest-side at 75% 65% ,rgba(219, 228, 255, 1),#fff);
+    cursor: pointer;
 }

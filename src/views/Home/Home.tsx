@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import InputAdornment from '@mui/material/InputAdornment';
+import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
 import './style.css'
 const Home = () => {
     return(
@@ -29,9 +30,29 @@ const Home = () => {
                    </div>
                 </Grid>
                 <Grid size={{xs:12}}>
+                  <div className="services">
                     <div className="service-item">
-                      
+                      <PhotoCameraOutlinedIcon className="service-icon"/>
+                      <p>Photography</p>
                     </div>
+                    <div className="service-item">
+                      <PhotoCameraOutlinedIcon className="service-icon"/>
+                      <p>Interior design</p>
+                    </div>
+                    <div className="service-item">
+                      <PhotoCameraOutlinedIcon className="service-icon"/>
+                      <p>Catering</p>
+                    </div>
+                    <div className="service-item">
+                      <PhotoCameraOutlinedIcon className="service-icon"/>
+                      <p>Fashion & Clothing</p>
+                    </div>
+                    <div className="service-item">
+                      <PhotoCameraOutlinedIcon className="service-icon"/>
+                      <p>House Care</p>
+                    </div>
+
+                  </div>
                 </Grid>
             </Grid>
         </div>

@@ -1,0 +1,63 @@
+.category-section-filter{
+    margin-left: var(--primary-side-margin);
+    margin-right: var(--primary-side-margin);
+    margin-top: 30px;
+}
+.category-member-profile{
+    border: 1px solid var(--main-border-color);
+    border-radius: var(--main-radius);
+    margin-top: 50px;
+    margin-bottom: var(--primary-vertical-margin);
+    margin-left: var(--primary-side-margin);
+    margin-right: var(--primary-side-margin);
+    height: 400px;
+}
+.avatar-container{
+    width: fit-content;
+    margin: auto;
+    margin-top:15px;
+
+}
+#avatar{
+    height:70px;
+    width: 70px;
+}
+
+.member-details{
+    text-align: center;
+}
+
+.name{
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.title{
+    margin-top: 0;
+    font-weight: 300;
+}
+
+.description{
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+#rating-icon{
+    position: relative;
+    top:5px;
+}
+
+.ratings-count{
+    color:#808080;
+}
+
+.more-cta{
+    display: block;
+    margin: auto;
+    margin-top: var(--primary-vertical-margin);
+}
+
+.start-price{
+    font-weight: 500;
+}

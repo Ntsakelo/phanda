@@ -9,11 +9,13 @@ body{
   --secondary-text-color:#000;
 
   --primary-cta-color:#7695FF;
-
+  --primary-theme-color:#7695FF;
 
   /* --primary-background-color:#a3b5d8; */
+
   --primary-background-color:#cad7f1;
-  --secondary-background-color:#F5F7F8;
+  /* --secondary-background-color:#F5F7F8; */
+  --secondary-background-color:#e1e1e1;
 
   --main-border-color:#cac9c9;
 
@@ -21,6 +23,7 @@ body{
 
   --primary-side-margin: 15px;
   --primary-vertical-padding: 15px;
+  --primary-vertical-margin: 15px;
 
   --main-text-font-size: 24px;
 }
