@@ -1,0 +1,234 @@
+.profile-details{
+    margin:0 var(--primary-side-margin);
+    margin-top: 30px;
+}
+
+.intro-title p{
+    font-size: 24px;
+    font-weight: 500;
+}
+.text-left-margin{
+    margin-left: var(--primary-side-margin);
+}
+#rating{
+    color:#000;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+#profile-avatar{
+    height: 70px;
+    width: 70px;
+    margin-left: 0;
+}
+
+#profile-name{
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    top: 5px;
+}
+
+.pictures{
+    height: 450px;
+    background-color: #f5f5f5;
+}
+
+.slide-img{
+   height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 140px;
+    min-width: 140px;
+    -o-object-fit: contain;
+    object-fit: cover;
+    width: 100%;
+}
+
+.swiper-button-next::after{
+    color:var(--primary-cta-color)
+}
+
+.swiper-button-prev::after{
+    color:var(--primary-cta-color)
+}
+
+.swiper-pagination-bullet-active{
+    background: var(--primary-cta-color) !important;
+}
+
+.main-head{
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.reviews-container{
+    border: 1px solid var(--main-border-color);
+    min-height: 200px;
+    height: 100%;
+    border-radius: var(--main-radius);
+}
+
+#profile-reviews-avatar{
+    width: 50px;
+    height:50px;
+    position: relative;
+    top: 10px
+}
+
+#reviewer-name{
+    font-size: 16px;
+    position: relative;
+    top:10px
+}
+
+.review{
+    margin-top: 0;
+    margin-left: var(--primary-side-margin);
+    margin-right: var(--primary-side-margin);
+}
+
+.controllers-container{
+    text-align: center;
+    margin-top: 10px;
+}
+.controllers-container *{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    color:var(--primary-cta-color);
+    cursor: pointer;
+
+}
+
+.preference-notice{
+ border: 1px solid var(--main-border-color);
+ border-radius: var(--main-radius); 
+ margin-top: 50px;  
+}
+.notice-head{
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: var(--primary-side-margin);
+}
+#info-icon{
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.preference-notice p{
+    font-size: 14px;
+    margin-left: var(--primary-side-margin);
+    margin-right: var(--primary-side-margin);
+}
+
+#about-head{
+ margin-bottom: 0px;
+}
+
+#about-profile-avatar{
+    height: 80px;
+    width: 80px;
+}
+
+#about-profile-name{
+    top:0;
+    font-size: 16px;
+    margin-bottom: 5px;
+
+}
+.overall-rating{
+    margin-top: 0;
+}
+.reviewers-count{
+    position: relative;
+    top: -5px;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.profile-title{
+    color:#808080;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#contact-me-cta{
+    margin-left: var(--primary-side-margin);
+}
+
+.pricing-details{
+    height: 500px;
+    width: 400px;
+    border: 1px solid var(--main-border-color);
+    border-radius: var(--main-radius);
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+.sticky{
+    position: fixed; /* Fixes the element in place */
+    left: 100%; 
+    right: 50%;
+    margin-right:24px;
+    top: 20px;
+}
+
+.about-me-section{
+    min-height: 400px;
+    border: 1px solid var(--main-border-color);
+    border-radius: var(--main-radius);
+    margin-top: 30px;
+}
+
+.about-text-main, .about-text-secondary{
+    margin-left: var(--primary-side-margin);
+}
+
+.about-text-main{
+    font-weight: 400;
+    color: #808080;
+}
+
+.about-text-secondary{
+    font-weight: 600;
+    color:#696969;
+}
+
+.about-me-description{
+    font-weight: 400;
+    color: #808080;
+    margin: 0 var(--primary-side-margin);
+    margin-top: 10px;  
+}
+
+.customer-review{
+    border: 1px solid var(--main-border-color);
+    border-radius: var(--main-radius);
+    margin-top: 30px;
+}
+
+.seller-response{
+    margin-left: 40px;
+    margin-top: 0;
+}
+
+.review-upvote{
+   margin-left: var(--primary-side-margin);
+   margin-right: var(--primary-side-margin);
+}
+.review-downvote,.review-upvote{
+    cursor: pointer;
+}
+@media screen and (width < 56.25rem){
+    #desktop-view-package-details{
+        display: none;
+    }
+}
+

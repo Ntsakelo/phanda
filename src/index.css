@@ -18,6 +18,7 @@ body{
   --secondary-background-color:#e1e1e1;
 
   --main-border-color:#cac9c9;
+  
 
   --main-radius:10px;
 
@@ -42,4 +43,14 @@ body{
   font-size: var(--main-text-font-size);
   color:var(--primary-text-color);
   
+}
+
+.secondary-cta{
+  padding: 10px;
+  background-color: #fff;
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  border: 1px solid var(--main-border-color);
+  border-radius:var(--main-radius);
+  cursor: pointer;
 }

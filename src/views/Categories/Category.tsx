@@ -15,6 +15,7 @@ import { styled } from '@mui/material/styles';
 import StarIcon from '@mui/icons-material/Star';
 import profile from '../../images/pexels-sulimansallehi-1704488.jpg';
 
+
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
         backgroundColor: '#44b700',

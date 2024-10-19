@@ -5,6 +5,7 @@ import Home from './views/Home';
 import Category from './views/Categories/Category';
 import Photography from './components/Categories/Photography';
 import InteriorDesign from './components/Categories/Interior Design';
+import Profile from './views/Profile';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
              <Route path="/categories/photography" element={<Photography />} />
              <Route path="/categories/interior-design" element={<InteriorDesign />} />
          </Route>
+         <Route path="/:category/:username" element={<Profile />} />
        </Routes>    
     </div>
   );
