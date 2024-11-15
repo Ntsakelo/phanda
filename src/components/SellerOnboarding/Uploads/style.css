@@ -1,0 +1,24 @@
+.uploads-section{
+    border: 1px solid var(--main-border-color);
+    margin-top: 30px;
+    padding-left: 15px;
+    min-height: 250px;
+    border-radius: 5px;
+}
+
+.upload-container{
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.upload-pic{
+    height: 100%;
+    width: 100%;
+}
+
+.check-upload{
+
+    color: var(--primary-theme-color);
+}

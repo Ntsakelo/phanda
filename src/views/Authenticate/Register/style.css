@@ -1,0 +1,40 @@
+.auth-container{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+    min-height: 500px;
+    height:fit-content;
+    box-shadow: 3px 3px 3px 3px #edecec;
+}
+
+.auth-img{
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#register-cta{
+    display: block;
+    margin: auto; 
+    margin-top: 30px;
+    width:100px
+}
+#register-loading-cta{
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+.form-text{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.error{
+    margin-top: 0;
+    text-align: right;
+    color:#f00;
+    font-size: 14px;
+}

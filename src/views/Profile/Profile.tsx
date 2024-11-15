@@ -40,6 +40,7 @@ import Collapse from '@mui/material/Collapse';
 import moment from 'moment';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
+import useFetch from '../../utils/useFetch';
 
 
 
@@ -108,6 +109,8 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 
 const Profile = () => {
+    const [errorMessage,result] = useFetch('profile');
+    console.log(result)
     //const swiper = useSwiper();
     const [value, setValue] = useState(0);
     const [sticky, setSticky] = useState(false);

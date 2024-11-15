@@ -1,0 +1,7 @@
+#logo{
+    height:25px;
+    position: relative;
+    top: 5px;
+    margin-left: var(--primary-side-margin);
+    margin-bottom: 30px;
+}
