@@ -9,6 +9,8 @@ import { ThemeProvider } from '@mui/material';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import { TextareaAutosize as BaseTextareaAutosize } from '@mui/base/TextareaAutosize';
+import { useDispatch, UseDispatch,useSelector } from 'react-redux';
+import {actions} from '../../../store/index'
 
 const Textarea = styled(BaseTextareaAutosize)(
     ({ theme }) => `
@@ -28,6 +30,10 @@ const Textarea = styled(BaseTextareaAutosize)(
 );
 
 const ProfessionalDetails = () => {
+    const requestResponse = useSelector((state:any) => state.requestResponse)
+    const dispatch = useDispatch()
+     
+
     return (
         <div>
             <Grid container>

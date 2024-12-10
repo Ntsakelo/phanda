@@ -3,11 +3,19 @@ import logo from '../../images/Phanda.svg';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import useFetch from '../../utils/useFetch';
 import './style.css';
 
 const Nav = () => {
     const [isOpened, setIsOpened] = useState(false);
+    const {getData,result,error} = useFetch()
+   
+    
+  const call = (async() =>{
+       await getData('categories') 
+
+   })()
 
     const handleOpen = () => {
         setIsOpened(true);
@@ -46,12 +54,15 @@ const Nav = () => {
                    </div>
                <Grid size={{xs:12}}>
                   <div className="secondary-nav-container">
-                     <Link to="/" className="nav-link secondary-nav-link">Photography</Link>
-                     <Link to="/" className="nav-link secondary-nav-link">Tailor</Link>
+                    {result && result.status===200 && result.data.map((category:any) => (
+                        <Link to={`/categories?id=${category.id}`} className="nav-link secondary-nav-link" key={category.id}>{category.label}</Link>
+
+                    ))}
+                     {/* <Link to="/" className="nav-link secondary-nav-link">Tailor</Link>
                      <Link to="/" className="nav-link secondary-nav-link">Gardening</Link>
                      <Link to="/" className="nav-link secondary-nav-link">Baking</Link>
                      <Link to="/" className="nav-link secondary-nav-link">Decor</Link>
-                     <Link to="/" className="nav-link secondary-nav-link">House helper</Link>
+                     <Link to="/" className="nav-link secondary-nav-link">House helper</Link> */}
                   </div>
                </Grid>
             </Grid>

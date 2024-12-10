@@ -14,7 +14,9 @@ import Uploads from './components/SellerOnboarding/Uploads';
 import Register from './views/Authenticate/Register';
 import Login from './views/Authenticate/Login';
 
+
 function App() {
+ 
   return (
     <div className="App">
        <Routes>

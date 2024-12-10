@@ -109,13 +109,18 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 
 const Profile = () => {
-    const [errorMessage,result] = useFetch('profile');
+    const {getData,result,error} = useFetch();
     console.log(result)
     //const swiper = useSwiper();
     const [value, setValue] = useState(0);
     const [sticky, setSticky] = useState(false);
     const [expanded, setExpanded] = useState(false);
     console.log(date);
+
+    const call = (async() =>{
+        await getData('profile') 
+ 
+    })()
 
     const handleExpandClick = () => {
         setExpanded(!expanded);

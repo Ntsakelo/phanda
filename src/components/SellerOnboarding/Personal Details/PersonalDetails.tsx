@@ -20,6 +20,10 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useEffect, useState } from 'react';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import { useDispatch, UseDispatch,useSelector } from 'react-redux';
+import {actions} from '../../../store/index'
+
+
 
 
 
@@ -55,12 +59,67 @@ const VisuallyHiddenInput = styled('input')({
 const rows: { language: string, level: string }[] = [
 
 ];
-const PersonalDetails = () => {
+
+interface LanguageProficiency{
+    language:string,
+    level:string
+}
+
+interface PersonalData{
+    first_name:string,
+    last_name:string,
+    display_name:string,
+    email_address: string,
+    description:string,
+    language_proficiency: LanguageProficiency[] | undefined
+}
+
+const PersonalDetails = () => { 
+    const requestResponse = useSelector((state:any) => state.requestResponse)
+    const dispatch = useDispatch()
+    
+    useEffect(() => {
+        if(requestResponse){
+            console.log(requestResponse)
+        }
+    },[requestResponse])
+    
     const [language, setLanguage] = useState('');
     const [level, setLevel] = useState('');
     const [userRows, setUserRows] = useState<{ language: string, level: string }[]>();
     const [editValues, setEditValues] = useState<{ language: string, level: string } | null>();
     const [editIndex, setEditIndex] = useState<number>();
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [displayName, setDisplayName] = useState('');
+    const [email, setEmail] = useState('');
+    const [description, setDescription] = useState('')
+
+    useEffect(() => {
+        if(userRows && userRows.length && firstName && displayName && lastName && email && description){
+            dispatch(actions.setIsFormCompleted(true))
+            let data:PersonalData = {
+                "first_name": firstName,
+                "last_name": lastName,
+                "display_name": displayName,
+                "email_address": email,
+                "description": description,
+                "language_proficiency": userRows
+            }
+            let formData = {
+                data,
+                endpoint:'profile'
+            }
+
+            dispatch(actions.setFormData(formData))
+
+        }if(!userRows || !firstName || !displayName || !lastName || !email || !description){
+            dispatch(actions.setIsFormCompleted(false))
+        }
+    },[userRows,firstName,lastName,email,description,displayName])
+
+    
+
 
     useEffect(() => {
         setUserRows(userRows);
@@ -140,27 +199,52 @@ const PersonalDetails = () => {
                     </Grid>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <div className="input-container">
-                            <TextField fullWidth label="First name" id="firstName" required />
+                            <TextField 
+                            fullWidth 
+                            label="First name" 
+                            id="firstName" 
+                            onChange={(e) => setFirstName(e.target.value)}
+                            required />
                         </div>
                     </Grid>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <div className="input-container align-right">
-                            <TextField fullWidth label="Last name" id="lastName" required />
+                            <TextField 
+                            fullWidth 
+                            label="Last name" 
+                            id="lastName" 
+                            onChange={(e) => setLastName(e.target.value)}
+                            required />
                         </div>
                     </Grid>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <div className="input-container">
-                            <TextField fullWidth label="Display Name" id="displayName" required />
+                            <TextField 
+                            fullWidth 
+                            label="Display Name" 
+                            id="displayName" 
+                            onChange={(e) => setDisplayName(e.target.value)}
+                            required />
                         </div>
                     </Grid>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <div className="input-container align-right">
-                            <TextField fullWidth label="Email address" id="email" required />
+                            <TextField 
+                            fullWidth 
+                            label="Email 
+                            address" 
+                            id="email" 
+                            onChange={(e) => setEmail(e.target.value)}
+                            required />
                         </div>
                     </Grid>
                     <Grid size={{ xs: 12 }}>
                         <div className="input-container" id="description-textArea">
-                            <Textarea aria-label="empty textarea" placeholder="Share a bit about your experience, the work that you have done, and area of expertise" minRows={4} />
+                            <Textarea 
+                            aria-label="empty textarea" 
+                            placeholder="Share a bit about your experience, the work that you have done, and area of expertise" 
+                            onChange={(e) => setDescription(e.target.value)}
+                            minRows={4} />
                         </div>
                     </Grid>
                     <Grid size={{ xs: 12 }}>
